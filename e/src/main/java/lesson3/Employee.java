@@ -22,12 +22,14 @@ public class Employee {
 private String name;
 private LocalDate birthDate;
 private int Salary;
+private Gender gender;
 
-public Employee(String name, LocalDate birthDate, int Salary) {
+public Employee(String name, LocalDate birthDate, int Salary, Gender gender) {
 
     this.name = name;
     this.birthDate = birthDate;
     this.Salary = Salary;
+    this.gender = gender;
 }
 
     public String getName() {
@@ -52,6 +54,13 @@ public Employee(String name, LocalDate birthDate, int Salary) {
 
     public void setSalary(int Salary) {
         this.Salary = Salary;
+    }
+    public Gender getGender() {
+        return this.gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
 

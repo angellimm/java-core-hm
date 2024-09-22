@@ -5,9 +5,9 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class HeadEmployee extends Employee{
-    public HeadEmployee(String name, LocalDate dateofBirth, int Salary){
+    public HeadEmployee(String name, LocalDate dateofBirth, int Salary, Gender gender){
     
-super(name, dateofBirth, Salary);
+super(name, dateofBirth, Salary, gender);
     
     }
 
