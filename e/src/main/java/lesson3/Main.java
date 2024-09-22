@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
 
-// import static lesson3.Employee.birthDateComparator;
+import static lesson3.Employee.birthDateComparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,11 +37,30 @@ public class Main {
         Holiday currentHoliday = getCurrentHoliday();
         celebration(employees, currentHoliday);
 
-    }
-    private static Holiday getCurrentHoliday() {
-        
-        return Holiday.defendersDay;}
+        if(birthDateComparator().compare(emp2, emp1) > 0){
+            System.out.println(emp2.getName() + " is older" );
+        }
+        else if(birthDateComparator().compare(emp2, emp1) < 0){
+            System.out.println(emp2.getName() + " is younger" );
+        }
+        else {
+            System.out.println(emp2.getName() + " and " + emp1.getName() + " are the same age" );
 
+        }
+        for (Employee employee : employees) {
+            System.out.println(employee.getName() + " " + employee.getSalary() + " before raise");
+        }
+        HeadEmployee.EmployeeSalaryRaise(employees, 10);
+
+        for (Employee employee : employees) {
+            System.out.println(employee.getName() + " " +  employee.getSalary() + " after raise");
+        }
+        
+    }
+private static Holiday getCurrentHoliday() {
+        
+    return Holiday.defendersDay;
+}
         private static void celebration(List<Employee> employees, Holiday holiday){
             for (Employee employee : employees){
                 if (holiday == Holiday.noHoliday) {
@@ -55,41 +74,12 @@ public class Main {
                         else if(holiday == Holiday.internationalWomensDay && employee.getGender() == Gender.female){
                             System.out.println(employee.getName() + " happy women's day!");
                         }
-                    
-                
-                    
+                        
+                    }
                 }
             }
-        }
-
-
-
-
-
- 
+            
+        
         
 
 
-
-//         if(birthDateComparator().compare(emp2, emp1) > 0){
-//             System.out.println(emp2.getName() + " is older" );
-//         }
-//         else if(birthDateComparator().compare(emp2, emp1) < 0){
-//             System.out.println(emp2.getName() + " is younger" );
-//         }
-//         else {
-//             System.out.println(emp2.getName() + " and " + emp1.getName() + " are the same age" );
-
-//         }
-
-//     for (Employee employee : employees) {
-//     System.out.println(employee.getName() + " " + employee.getSalary() + " before raise");
-// }
-
-
-// HeadEmployee.EmployeeSalaryRaise(employees, 10);
-
-// for (Employee employee : employees) {
-//     System.out.println(employee.getName() + " " +  employee.getSalary() + " after raise");
-
-// } 
